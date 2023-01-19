@@ -34,7 +34,8 @@ input {
   padding: 0.5em;
 }
 
-button {
+/* Adding or removing */
+button.addRemove {
   padding: 0.5em 1em;
   cursor: pointer;
   border: none;
@@ -42,6 +43,84 @@ button {
   background-color: #4285f4;
 }
 
-/* .thisMonth {
-  display: flex;
+/* Button state */
+button#state {
+  color: white;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  margin-right: 1em;
+  cursor: pointer;
+  border: none;
+  padding: 10px 1.5em;
+  transition: 0.2s ease-in-out;
+  background-color: grey;
+}
+
+.test {
+  color: white;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  margin-right: 1em;
+  cursor: pointer;
+  border: none;
+  padding: 10px 1.5em;
+  transition: 0.2s ease-in-out;
+}
+
+.hide {
+  display: none;
+}
+
+.tooltip {
+  position: absolute;
+  left: 39%;
+  margin: 1em 0;
+  z-index: 1;
+  background-color: white;
+  border-radius: 0.5em;
+  box-shadow: 8px 8px 5px rgb(215, 215, 215);
+}
+
+ul {
+  list-style: none;
+  margin: auto 0;
+  padding: 1em;
+}
+
+ul li button {
+  border-radius: 0.2em;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  margin: 1em 0;
+}
+
+ul li button#done {
+  background-color: rgb(84, 199, 84);
+}
+
+ul li button#inP {
+  background-color: rgb(255, 180, 42);
+}
+
+ul li button#blocked {
+  background-color: rgb(255, 62, 62);
+}
+
+ul li button#grey {
+  background-color: grey;
+}
+/* button.stat {
+  width: 150px;
+  margin-right: 1em;
+  cursor: pointer;
+  border: none;
+  color: white;
+  padding: 10px 1.5em;
+  background: grey;
 } */

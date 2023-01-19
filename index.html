@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>My tasks</title>
+    <link rel="icon" href="./img/logo.png" sizes="32x32" type="image/png">
+    <title>Tasks</title>
 </head>
 
 <body>
@@ -14,10 +15,18 @@
             <div class="add">
                 <h2>Adding a task</h2>
                 <input type="text" class="task" placeholder="Task" value="" />
-                <input type="text" class="task" placeholder="Status" value="">
+                <button onclick="btnState(btnStatus, 'visible');" type="text" class="btn" id="state" value="">Status</button>
+                <div class="tooltip">
+                    <ul>
+                        <li><button onclick="btnState(currentButton, 'done')" class="btn" id="done" value="Done">Done</button></li>
+                        <li><button onclick="btnState(currentButton, 'inProcess')" class="btn" id="inP" value="In process">In process</button></li>
+                        <li><button onclick="btnState(currentButton, 'blocked')" class="btn" id="blocked" value="Blocked">Blocked</button></li>
+                        <li><button  onclick="btnState(currentButton, 'grey')" class="btn" id="grey" value="Status">Status</button></li>
+                    </ul>
+                </div>
                 <input type="date" class="task" value="">
                 <input type="time" class="task" value="">
-                <button onclick="addToDo()">+</button>
+                <button class="addRemove" onclick="addToDo()">+</button>
             </div>
             <h2>This month</h2>
             <div class="thisMonth"></div>
